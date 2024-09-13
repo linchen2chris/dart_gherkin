@@ -55,6 +55,7 @@ class AggregatedHook extends Hook {
   /// Run after a scenario has executed
   @override
   Future<void> onAfterScenario(
+    World world,
     TestConfiguration config,
     String scenario,
     Iterable<Tag> tags, {
@@ -62,6 +63,7 @@ class AggregatedHook extends Hook {
   }) async =>
       _invokeHooks(
         (h) => h.onAfterScenario(
+          world,
           config,
           scenario,
           tags,
