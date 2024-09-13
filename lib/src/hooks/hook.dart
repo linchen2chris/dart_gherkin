@@ -35,6 +35,7 @@ abstract class Hook {
 
   /// Run after a scenario has executed
   Future<void> onAfterScenario(
+    World world,
     TestConfiguration config,
     String scenario,
     Iterable<Tag> tags, {
