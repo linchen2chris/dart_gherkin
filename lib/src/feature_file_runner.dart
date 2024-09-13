@@ -314,6 +314,7 @@ class FeatureFileRunner {
         ),
       );
       await _hook.onAfterScenario(
+        world,
         _config,
         scenario.name,
         tags,
